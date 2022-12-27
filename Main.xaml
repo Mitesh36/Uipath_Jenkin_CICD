@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1140,903.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1140,1036" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
       <x:String>System.Activities</x:String>
@@ -73,19 +73,15 @@
       <AssemblyReference>UiPath.Testing</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="443.2,838.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="443.2,971.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="400,748.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="400,881.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
-        <Variable x:TypeArguments="x:Int32" Name="TestValue">
-          <Variable.Default>
-            <Literal x:TypeArguments="x:Int32" Value="10" />
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="x:Int32" Default="10" Name="TestValue" />
         <Variable x:TypeArguments="x:Boolean" Name="outVerifyResult" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
@@ -108,6 +104,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uta:VerifyExpression>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Verified Value &quot;+outVerifyResult]" />
     </Sequence>
   </Sequence>
 </Activity>
